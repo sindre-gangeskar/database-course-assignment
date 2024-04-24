@@ -1,0 +1,7 @@
+{
+    "query": [
+        "INSERT INTO Users(FullName, Username, Password, RoleId) VALUES('System Admin', 'Admin', 'admin1234', 2)",
+        "INSERT INTO Users(FullName, Username, Password, RoleId) VALUES('User', 'User','user1234', 1)",
+        "INSERT INTO Users(FullName, Username, Password, RoleId) VALUES('User2', 'User2','User1234', 1)"
+    ]
+}

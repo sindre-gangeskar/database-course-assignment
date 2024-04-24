@@ -1,0 +1,66 @@
+<div class="container-fluid mt-5">
+    <h2 class="p-3 text-center">Animals for Adoption</h2>
+    <div class="list-group">
+        <%- include('./topButtons.ejs') %>
+            <div class="row px-3 py-1 w-100 text-center">
+                <span class="col py-1 bg-noroff">Id</span>
+                <span class="col py-1 bg-noroff">Name</span>
+                <span class="col py-1 bg-noroff">Species</span>
+                <span class="col py-1 bg-noroff">Birthday</span>
+                <span class="col py-1 bg-noroff">Temperament</span>
+                <span class="col py-1 bg-noroff">Size</span>
+                <span class="col py-1 bg-noroff">Age</span>
+                <span class="col py-1 bg-noroff">Adopted</span>
+                <span class="col py-1 bg-noroff">Options</span>
+            </div>
+
+            <% animals.forEach(function(animal) { %>
+                <div class="row px-3 py-1 w-100 text-center">
+                    <span class="col py-1 bg-light ">
+                        <%=animal.id%>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <%=animal.AnimalName%>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <%=animal.Specie.SpecieName%>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <%=animal.Birthday%>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <% animal.Temperaments.forEach((temperament, index )=> {%>
+                            <% if(index < animal.Temperaments.length - 1 ) { %>
+                                <%= temperament.TemperamentName %>,
+                                    <% } else { %>
+                                        <%= temperament.TemperamentName %>
+                                            <% } %>
+                                                <%}) %>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <%=animal.Specie.Size%>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <%= animal.Age %>
+                    </span>
+                    <span class="col py-1 bg-light">
+                        <% if( animal.Adopted===true) { %>
+                            <span class="text-success fs-4"><i class="bi bi-check-circle"></i></span>
+                            <% } else { %>
+                                <span class="text-danger fs-4"><i class="bi bi-x-circle"></i></span>
+                                <% } %>
+                    </span>
+                    <span class="col py-1 bg-light text-center">
+                        <% if(user) { %>
+                            <% if(animal.Adopted) { %>
+                                <button class="btn-sm btn-danger" onclick="deleteAnimal(`http:\/\/localhost:3000\/animals`,<%=animal.id%>)">Cancel Adoption</button>
+                                <% } else { %>
+                                    <button class="btn-sm btn-warning" onclick="adoptAnimal(<%= animal.id %>)">Adopt</button>
+                                    <%} %>
+                                        <% } %>
+                    </span>
+                </div>
+                <% }); %>
+                    <hr>
+    </div>
+</div>

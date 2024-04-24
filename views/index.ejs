@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DAB - Adopt Animal</title>
+    <%- include('./partials/head.ejs') %>
+  </head>
+
+  <body>
+    <div class="container-fluid mt-5 text-center">
+      <%- include('./partials/navbar.ejs', {user: user}) %>
+        <%- include('./partials/index.ejs') %>
+          <%- include('./partials/scripts.ejs') %>
+    </div>
+  </body>
+
+</html>

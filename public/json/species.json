@@ -1,0 +1,14 @@
+{
+    "query": [
+        "INSERT INTO Species(SpecieName, Size)VALUES('Dwarf Hamster', 'Small')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Teddy Bear Hamster', 'Small')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Jack-Russel', 'Medium')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Budgy', 'Small')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Tortouse', 'Medium')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Gold Fish', 'Small')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Lizzard', 'Medium')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Bearder Dragon', 'Large')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Parrot', 'Large')",
+        "INSERT INTO Species(SpecieName, Size)VALUES('Corn Snake', 'Medium')"
+    ]
+}

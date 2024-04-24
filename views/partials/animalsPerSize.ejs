@@ -1,0 +1,27 @@
+<div class="container-fluid mt-5">
+    <h2 class="p-3 text-center">Animals In Size</h2>
+    <div class="list-group">
+        <%- include('./topButtons.ejs') %>
+    <table class="table my-1 table-responsive">
+        <thead class="bg-noroff">
+            <tr class="text-center">
+                <td class="py-1">Size</td>
+                <td class="py-1">Count in each category</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% animals.forEach(animal=> { %>
+                <tr class="table-light text-center">
+                    <td>
+                        <%= animal.Size %>
+                    </td>
+                    <td>
+                        <%= animal.animalsPerSize %>
+                    </td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+</div>
+</div>
+</div>

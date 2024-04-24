@@ -1,0 +1,9 @@
+{
+    "query": [
+        "INSERT INTO temperaments(TemperamentName)VALUES('Calm')",
+        "INSERT INTO temperaments(TemperamentName)VALUES('Lazy')",
+        "INSERT INTO temperaments(TemperamentName)VALUES('Scared')",
+        "INSERT INTO temperaments(TemperamentName)VALUES('Energetic')",
+        "INSERT INTO temperaments(TemperamentName)VALUES('Happy')"
+    ]
+}

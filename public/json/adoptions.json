@@ -1,0 +1,6 @@
+{
+    "query": [
+        "INSERT INTO adoptions(UserId, AnimalId)VALUES(1, 1)",
+        "INSERT INTO adoptions(UserId, AnimalId)VALUES(2, 5)"
+    ]
+}
